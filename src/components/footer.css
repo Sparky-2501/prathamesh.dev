@@ -1,0 +1,21 @@
+.mask-letter {
+  display: inline-block;
+  font-weight: 900;
+  transition: all 0.35s ease;
+  color: white;                /* default: plain white text */
+  cursor: pointer;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text; /* keep, but only matters when color is transparent */
+  background-clip: text;
+  -webkit-text-fill-color: white; /* default fill for webkit */
+}
+
+/* single hover rule that reads the --img variable */
+.mask-letter:hover {
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* Chrome/Safari require this */
+  background-image: var(--img);
+}
